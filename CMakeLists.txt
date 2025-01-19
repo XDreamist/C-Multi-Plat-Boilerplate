@@ -23,7 +23,7 @@ file(GLOB_RECURSE SOURCES
 
 # Option to use Qt
 option(USE_QT "Use Qt for GUI" OFF)
-option(USE_IMGUI "Use ImGui for GUI" OFF)
+option(USE_IMGUI "Use ImGui for GUI" ON)
 
 # Other sources to build
 set(EXTERNAL_SOURCES "")
@@ -96,4 +96,6 @@ if(USE_QT)
     elseif(WIN32)
         message(WARNING "windeployqt executable not found. Ensure QT_DIR is set correctly.")
     endif()
+elseif(USE_IMGUI)
+    target_compile_definitions(${EXECUTABLE_NAME} PRIVATE IMGUI_PRESENT)
 endif()

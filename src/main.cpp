@@ -3,7 +3,7 @@
 #ifdef QT_PRESENT
     #include <QApplication>
     #include <QWidget>
-#else
+#elif IMGUI_PRESENT
     #include "imguirunner.h"
 #endif
 
@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
         window.show();
         
         return app.exec();
-    #else
+    #elif IMGUI_PRESENT
         ImGuiRunner* imRunner = new ImGuiRunner;
         return imRunner->run();
     #endif
