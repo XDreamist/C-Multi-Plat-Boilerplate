@@ -18,10 +18,6 @@ file(GLOB_RECURSE SRC_FILES
     "${SRC_DIR}/*.cpp"
 )
 
-# Option to use Qt
-option(USE_QT "Use Qt for GUI" ON)
-option(USE_IMGUI "Use ImGui for GUI" OFF)
-
 # Other sources to build
 set(EXTERNAL_SOURCES "")
 
