@@ -1,6 +1,8 @@
 #include <iostream>
+#include "imguirunner.h"
 
 int main(int argc, char* argv[])
 {
-    return 0;
+    ImGuiRunner* imRunner = new ImGuiRunner;
+    return imRunner->run();
 }
